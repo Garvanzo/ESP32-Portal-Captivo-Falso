@@ -9,7 +9,7 @@ Se carga a tu esp32 como un Sketch de arduino
 
 Imagenes ilustrativas
 
-!(main/Recursos(ignorar)/img1.png)
+![WifiFree](Recursos(ignorar)/img1.png)
 
 
 El portal dirige a la 172.0.0.1
