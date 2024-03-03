@@ -9,7 +9,7 @@ Se carga a tu esp32 como un Sketch de arduino
 
 Imagenes ilustrativas
 
-<span>[https://raw.githubusercontent.com/parzibyte/WaterPy/master/assets/ImagenV1.png](https://github.com/LittleHackid/ESP32-Portal-Captivo-Falso/blob/main/Recursos(ignorar)/img1.png</span><span>)</span>
+<span>(https://github.com/LittleHackid/ESP32-Portal-Captivo-Falso/blob/main/Recursos(ignorar)/img1.png</span><span>)</span>
 
 
 El portal dirige a la 172.0.0.1
